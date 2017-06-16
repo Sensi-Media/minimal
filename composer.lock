@@ -1,0 +1,266 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "429dff4ba89681fc5bdbacee56ab4631",
+    "content-hash": "fb0d1a802c44f0f9955e401b559ef41c",
+    "packages": [
+        {
+            "name": "filp/whoops",
+            "version": "1.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "72538eeb70bbfb11964412a3d098d109efd012f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/72538eeb70bbfb11964412a3d098d109efd012f7",
+                "reference": "72538eeb70bbfb11964412a3d098d109efd012f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Whoops": "src/"
+                },
+                "classmap": [
+                    "src/deprecated"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://github.com/filp/whoops",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "silex-provider",
+                "whoops",
+                "zf2"
+            ],
+            "time": "2015-06-29 05:42:04"
+        },
+        {
+            "name": "monolyth/envy",
+            "version": "0.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monolyth-php/envy.git",
+                "reference": "f8c3f1530687290d706da1aefed9aa63f1cba67b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monolyth-php/envy/zipball/f8c3f1530687290d706da1aefed9aa63f1cba67b",
+                "reference": "f8c3f1530687290d706da1aefed9aa63f1cba67b",
+                "shasum": ""
+            },
+            "require": {
+                "monomelodies/kingconf": "^1.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Monolyth\\Envy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Flexible environment handler for PHP projects (including unit tests!)",
+            "time": "2017-04-11 06:52:16"
+        },
+        {
+            "name": "monolyth/improse",
+            "version": "0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monolyth-php/improse.git",
+                "reference": "14b369c6d67436532c81526fc37531a327157524"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monolyth-php/improse/zipball/14b369c6d67436532c81526fc37531a327157524",
+                "reference": "14b369c6d67436532c81526fc37531a327157524",
+                "shasum": ""
+            },
+            "require": {
+                "filp/whoops": "^1.1"
+            },
+            "require-dev": {
+                "gentry/gentry": "^0.10.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Monolyth\\Improse\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "PHP5 View and templating system for MVC projects",
+            "keywords": [
+                "mvc",
+                "php",
+                "template",
+                "view"
+            ],
+            "time": "2016-07-16 07:01:18"
+        },
+        {
+            "name": "monomelodies/kingconf",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monomelodies/kingconf.git",
+                "reference": "350bf4e1f8163b5843f9dec82bd6230968166015"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monomelodies/kingconf/zipball/350bf4e1f8163b5843f9dec82bd6230968166015",
+                "reference": "350bf4e1f8163b5843f9dec82bd6230968166015",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/yaml": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Monomelodies\\Kingconf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marijn Ophorst",
+                    "email": "marijn@monomelodies.nl"
+                }
+            ],
+            "description": "Load configuration in any sane format",
+            "keywords": [
+                "config",
+                "configuration",
+                "ini",
+                "json",
+                "loader",
+                "php",
+                "xml",
+                "yaml"
+            ],
+            "time": "2016-07-15 06:21:55"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/9752a30000a8ca9f4b34b5227d15d0101b96b063",
+                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "symfony/console": "~2.8|~3.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-06-02 22:05:06"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
