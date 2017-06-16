@@ -1,0 +1,21 @@
+{
+    "name": "sensi/minimal",
+    "description": "Minimal views for production",
+    "type": "library",
+    "license": "none",
+    "authors": [
+        {
+            "name": "Marijn Ophorst",
+            "email": "marijn@sensimedia.nl"
+        }
+    ],
+    "require": {
+        "monolyth/envy": "^0.5.3",
+        "monolyth/improse": "^0.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sensi\\Minimal\\": "./src"
+        }
+    }
+}
