@@ -3,6 +3,7 @@
 namespace Sensi\Minimal;
 
 use Monolyth\Improse;
+use Zend\Diactoros\Response\HtmlResponse;
 
 abstract class View extends Improse\View
 {
@@ -13,6 +14,11 @@ abstract class View extends Improse\View
             $html = preg_replace(['@^\s+@ms', '@\s+(</\w+>)$@m'], ['', '\\1'], $html);
         }
         return $html;
+    }
+
+    public function __invoke()
+    {
+        return new HtmlResponse($this->render());
     }
 }
 
