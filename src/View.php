@@ -4,7 +4,7 @@ namespace Sensi\Minimal;
 
 use Monolyth\Improse;
 
-class View extends Improse\View
+abstract class View extends Improse\View
 {
     public function render()
     {
