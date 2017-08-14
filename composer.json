@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": ">=7.0",
         "monolyth/envy": "^0.5.3",
         "monolyth/improse": "^0.7.0",
         "zendframework/zend-diactoros": "^1.4"
