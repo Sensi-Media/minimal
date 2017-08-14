@@ -4,7 +4,7 @@ namespace Sensi\Minimal;
 
 use Monolyth\Improse;
 use Zend\Diactoros\Response\HtmlResponse;
-use Twig_Loader_Error;
+use Twig_Error_Loader;
 use Monolyth\Frontal\Exception;
 
 abstract class View extends Improse\View
@@ -24,7 +24,7 @@ abstract class View extends Improse\View
                 $html
             );
             return $html;
-        } catch (Twig_Loader_Error $e) {
+        } catch (Twig_Error_Loader $e) {
             throw new Exception(404);
         }
     }
