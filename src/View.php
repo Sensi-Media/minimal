@@ -9,6 +9,12 @@ use Monolyth\Frontal\Exception;
 
 abstract class View extends Improse\View
 {
+    /** @var int */
+    protected $status = 200;
+
+    /** @var array */
+    protected $headers = [];
+
     public function render()
     {
         try {
@@ -31,7 +37,7 @@ abstract class View extends Improse\View
 
     public function __invoke()
     {
-        return new HtmlResponse($this->render());
+        return new HtmlResponse($this->render(), $this->status, $this->headers);
     }
 }
 
