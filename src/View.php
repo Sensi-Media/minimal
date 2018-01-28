@@ -3,12 +3,15 @@
 namespace Sensi\Minimal;
 
 use Monolyth\Improse;
+use Monolyth\Disclosure\Injector;
 use Zend\Diactoros\Response\HtmlResponse;
 use Twig_Error_Loader;
 use Monolyth\Frontal\Exception;
 
 abstract class View extends Improse\View
 {
+    use Injector;
+
     /** @var int */
     protected $status = 200;
 
@@ -17,6 +20,7 @@ abstract class View extends Improse\View
 
     public function render()
     {
+        $this->inject(function ($env) {});
         try {
             $html = $this->twig->render($this->template, $this->getVariables());
             if ($this->env->prod) {
