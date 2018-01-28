@@ -18,11 +18,23 @@ abstract class View extends Improse\View
     /** @var array */
     protected $headers = [];
 
+    /** @var array */
+    protected $excludePatterns = [];
+
     public function render()
     {
         $this->inject(function ($env) {});
         try {
             $html = $this->twig->render($this->template, $this->getVariables());
+            if ($this->excludePatterns) {
+                $html = preg_replace_callback(
+                    $this->excludePatterns,
+                    function ($match) {
+                        return $match[1].str_replace(' ', '&nbsp;', $match[2]).$match[3];
+                    },
+                    $html
+                );
+            }
             if ($this->env->prod) {
                 $html = preg_replace(['@^\s+@ms', '@\s+(</\w+>)$@m'], ['', '\\1'], $html);
             }
