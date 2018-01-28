@@ -12,8 +12,10 @@
     "require": {
         "php": ">=7.0",
         "monolyth/envy": "^0.5.3",
-        "monolyth/improse": "^0.7.0",
-        "zendframework/zend-diactoros": "^1.4"
+        "zendframework/zend-diactoros": "^1.4",
+        "monolyth/disclosure": "^2.1",
+        "twig/twig": "^2.4",
+        "monolyth/frontal": "^1.0"
     },
     "autoload": {
         "psr-4": {
