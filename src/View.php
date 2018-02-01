@@ -87,7 +87,11 @@ abstract class View extends Improse\View
             );
             return $html;
         } catch (Twig_Error_Loader $e) {
-            throw new Exception(404);
+            if ($this->env->prod) {
+                throw new Exception(404);
+            } else {
+                throw $e;
+            }
         }
     }
 
