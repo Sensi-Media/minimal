@@ -14,7 +14,7 @@
         "monolyth/envy": "^0.5.3",
         "zendframework/zend-diactoros": "^1.4",
         "monolyth/disclosure": "^2.1",
-        "twig/twig": "^1.24",
+        "twig/twig": "^2.5",
         "monolyth/frontal": "^1.0"
     },
     "autoload": {
