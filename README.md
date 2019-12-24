@@ -1,0 +1,2 @@
+# minimal
+Minimize views
