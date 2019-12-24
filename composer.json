@@ -2,7 +2,7 @@
     "name": "sensimedia/minimal",
     "description": "Minimal views for production",
     "type": "library",
-    "license": "none",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Marijn Ophorst",
