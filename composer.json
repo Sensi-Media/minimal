@@ -13,7 +13,7 @@
         "php": ">=7.3",
         "monolyth/envy": "^0.6.0",
         "monolyth/disclosure": "^2.1",
-        "twig/twig": "^3",
+        "twig/twig": "^2|^3",
         "monolyth/frontal": "^1.1"
     },
     "autoload": {
