@@ -95,7 +95,10 @@ abstract class View extends Improse\View
         }
     }
 
-    public function __invoke()
+    /**
+     * @return Laminas\Diactoros\Response\HtmlResponse
+     */
+    public function __invoke() : HtmlResponse
     {
         return new HtmlResponse($this->render(), $this->status, $this->headers);
     }
