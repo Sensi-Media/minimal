@@ -4,7 +4,7 @@ namespace Sensi\Minimal;
 
 use Monolyth\Improse;
 use Monolyth\Disclosure\Injector;
-use Zend\Diactoros\Response\HtmlResponse;
+use Laminas\Diactoros\Response\HtmlResponse;
 use Twig_Error_Loader;
 use Monolyth\Frontal\Exception;
 
