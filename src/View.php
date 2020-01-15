@@ -5,6 +5,7 @@ namespace Sensi\Minimal;
 use Monolyth\Improse;
 use Monolyth\Disclosure\Injector;
 use Laminas\Diactoros\Response\HtmlResponse;
+use Psr\Http\Message\ResponseInterface;
 use Twig_Error_Loader;
 use Monolyth\Frontal\Exception;
 
@@ -96,9 +97,9 @@ abstract class View extends Improse\View
     }
 
     /**
-     * @return Laminas\Diactoros\Response\HtmlResponse
+     * @return Psr\Http\Message\ResponseInterface
      */
-    public function __invoke() : HtmlResponse
+    public function __invoke() : ResponseInterface
     {
         return new HtmlResponse($this->render(), $this->status, $this->headers);
     }
