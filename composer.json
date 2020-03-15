@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=7.3",
-        "monolyth/envy": "^0.6.0",
+        "monolyth/envy": "^0.7.0",
         "monolyth/disclosure": "^2.1",
         "twig/twig": "^2|^3",
         "monolyth/frontal": "^1.1"
