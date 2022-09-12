@@ -3,11 +3,12 @@
 namespace Sensi\Minimal;
 
 use Monolyth\Improse;
-use Monolyth\Disclosure\Injector;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
 use Twig_Error_Loader;
 use Monolyth\Frontal\Exception;
+use Monolyth\Envy;
+use Twig;
 
 /**
  * Custom base view with sensible Sensi defaults:
@@ -17,8 +18,6 @@ use Monolyth\Frontal\Exception;
  */
 abstract class View extends Improse\View
 {
-    use Injector;
-
     /**
      * @var int
      *
@@ -60,6 +59,12 @@ abstract class View extends Improse\View
      */
     public function render() : string
     {
+        if (!isset($this->env, $this->twig)
+            || ! $this->env instanceof Envy\Environment
+            || ! $this->twig instanceof Twig\Environment
+        ) {
+            throw new DependencyException("Please make sure your view has an \$env and a \$twig member.");
+        }
         $this->inject(function ($env, $twig) {});
         try {
             $html = $this->twig->render($this->template, $this->getVariables());
