@@ -65,7 +65,6 @@ abstract class View extends Improse\View
         ) {
             throw new DependencyException("Please make sure your view has an \$env and a \$twig member.");
         }
-        $this->inject(function ($env, $twig) {});
         try {
             $html = $this->twig->render($this->template, $this->getVariables());
             if ($this->env->prod) {
