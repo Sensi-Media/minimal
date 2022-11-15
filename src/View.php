@@ -23,7 +23,7 @@ abstract class View extends Improse\View
      *
      * HTTP status code to send. Defaults to 200.
      */
-    protected $status = 200;
+    protected int $status = 200;
 
     /**
      * @var array
@@ -31,7 +31,7 @@ abstract class View extends Improse\View
      * Optional hash of extra headers to send. These are in the form
      * `$key => $value` and will be normalised by Diactoros.
      */
-    protected $headers = [];
+    protected array $headers = [];
 
     /**
      * @var array
@@ -48,7 +48,7 @@ abstract class View extends Improse\View
      * protected $excludePatterns = ['@(<div class="pre">)(.*?)(</div>)@ms'];
      * </code>
      */
-    protected $excludePatterns = [];
+    protected array $excludePatterns = [];
 
     /**
      * Render the template as a string, stripping whitespace on production.
