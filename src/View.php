@@ -55,8 +55,12 @@ abstract class View extends Improse\View
         #[Depends]
         private Envy\Environment $env,
         #[Depends]
-        private Twig\Environment $twig
-    ) {}
+        private Twig\Environment $twig,
+        string $template = null
+    )
+    {
+        parent::__construct($template);
+    }
 
     /**
      * Render the template as a string, stripping whitespace on production.
