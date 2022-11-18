@@ -9,6 +9,7 @@ use Twig_Error_Loader;
 use Monolyth\Frontal\Exception;
 use Monolyth\Envy;
 use Twig;
+use Monolyth\Disclosure\Depends;
 
 /**
  * Custom base view with sensible Sensi defaults:
@@ -50,6 +51,13 @@ abstract class View extends Improse\View
      */
     protected array $excludePatterns = [];
 
+    public function __construct(
+        #[Depends]
+        private Envy\Environment $env,
+        #[Depends]
+        private Twig\Environment $twig
+    ) {}
+
     /**
      * Render the template as a string, stripping whitespace on production.
      *
@@ -59,12 +67,6 @@ abstract class View extends Improse\View
      */
     public function render() : string
     {
-        if (!isset($this->env, $this->twig)
-            || ! $this->env instanceof Envy\Environment
-            || ! $this->twig instanceof Twig\Environment
-        ) {
-            throw new DependencyException("Please make sure your view has an \$env and a \$twig member.");
-        }
         try {
             $html = $this->twig->render($this->template, $this->getVariables());
             if ($this->env->prod) {
