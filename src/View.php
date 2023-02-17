@@ -5,7 +5,7 @@ namespace Sensi\Minimal;
 use Monolyth\Improse;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface;
-use Twig_Error_Loader;
+use Twig\Error\LoaderError;
 use Monolyth\Frontal\Exception;
 use Monolyth\Envy;
 use Twig;
@@ -97,7 +97,7 @@ abstract class View extends Improse\View
                 $html
             );
             return $html;
-        } catch (Twig_Error_Loader $e) {
+        } catch (LoaderError $e) {
             if ($this->env->prod) {
                 throw new Exception(404);
             } else {
