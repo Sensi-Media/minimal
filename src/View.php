@@ -56,7 +56,7 @@ abstract class View extends Improse\View
         private Envy\Environment $env,
         #[Depends]
         private Twig\Environment $twig,
-        string $template = null
+        ?string $template = null
     )
     {
         parent::__construct($template);
